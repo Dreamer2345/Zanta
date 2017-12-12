@@ -1,7 +1,13 @@
 #include <Arduboy2.h>
 Arduboy2 ard;
 Sprites sprites;
+uint32_t Points = 0;
+
+
 #include "Bitmaps.h"
+#include "Map.h"
+#include "Player.h"
+PlayerClass playerobj;
 #include "Game.h"
 
 enum class GameState { MainMenu, Game , Dead, InitGame};
