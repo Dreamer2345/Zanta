@@ -4,7 +4,7 @@ Sprites sprites;
 #include "Bitmaps.h"
 #include "Game.h"
 
-enum class GameState { MainMenu, Game , Dead};
+enum class GameState { MainMenu, Game , Dead, InitGame};
 GameState gameState = GameState::MainMenu;
 
 
@@ -28,6 +28,7 @@ void loop() {
   switch(gameState)
   {
     case GameState::MainMenu: UpdateMainMenu(); break;
+    case GameState::InitGame: InitGameState(); break;
     case GameState::Game: UpdateGame(); break;
     case GameState::Dead: Death(); break;
   }
