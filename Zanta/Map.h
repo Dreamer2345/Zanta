@@ -66,3 +66,23 @@ uint8_t GetBlock(int x, int y) {
   return Block;
 }
 
+bool Walkable(int x, int y) {
+  uint8_t p[4];
+  bool Walk = true; 
+  p[0] = (GetBlock(GetTileX(x-8), GetTileY(y-16)));
+  p[1] = (GetBlock(GetTileX(x+7), GetTileY(y-16)));
+  p[2] = (GetBlock(GetTileX(x-8), GetTileY(y+15)));
+  p[3] = (GetBlock(GetTileX(x+7), GetTileY(y+16)));
+  for (byte i=0; i<4;i++){
+    if (!(p[i] == 0)){
+        Walk = false;
+        break;
+      }
+  }
+  return Walk;
+}
+
+
+
+
+

@@ -36,7 +36,7 @@ void DisplayEnviroment()
 
 void UpdateGame(){  
   playerobj.PlayerMovement();
-  DisplayEnviroment()
+  DisplayEnviroment();
 }
 
 void Death(){

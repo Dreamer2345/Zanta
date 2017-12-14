@@ -3,6 +3,9 @@ Arduboy2 ard;
 Sprites sprites;
 uint32_t Points = 0;
 
+enum class GameState { MainMenu, Game , Dead, InitGame};
+GameState gameState = GameState::MainMenu;
+
 
 #include "Bitmaps.h"
 #include "Map.h"
@@ -10,8 +13,6 @@ uint32_t Points = 0;
 PlayerClass playerobj;
 #include "Game.h"
 
-enum class GameState { MainMenu, Game , Dead, InitGame};
-GameState gameState = GameState::MainMenu;
 
 
 
