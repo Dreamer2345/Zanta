@@ -61,7 +61,7 @@ uint8_t GetBlock(int x, int y) {
   if ((x < 0) || (y < 0) || (x >= MAP_WIDTH) || (y >= MAP_HEIGHT)) {
     return 0;
   }
-  uint8_t Block =  pgm_read_byte(Map[(x + (y * MAP_WIDTH))]);
+  uint8_t Block =  pgm_read_byte(&Map[(x + (y * MAP_WIDTH))]);
 
   return Block;
 }
