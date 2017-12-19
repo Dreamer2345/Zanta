@@ -11,6 +11,8 @@ GameState gameState = GameState::MainMenu;
 #include "Map.h"
 #include "Player.h"
 PlayerClass playerobj;
+#include "Sprite.h"
+SpriteClass Objects[MAXOBJECT];
 #include "Game.h"
 
 
@@ -21,6 +23,7 @@ PlayerClass playerobj;
 void setup() {
   ard.begin();
   ard.clear();
+  ard.initRandomSeed();
 }
 
 

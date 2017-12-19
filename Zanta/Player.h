@@ -5,6 +5,7 @@ class PlayerClass {
   unsigned y = 16*9; 
   byte d;
   char H;
+  char Bullets;
   bool Moving;
   uint8_t Frame;
   void PlayerMovement();
