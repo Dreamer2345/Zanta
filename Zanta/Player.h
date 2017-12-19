@@ -1,8 +1,8 @@
 
 class PlayerClass {
   public:
-  unsigned x;
-  unsigned y;
+  unsigned x = 16*8;
+  unsigned y = 16*9; 
   byte d;
   char H;
   bool Moving;
@@ -13,29 +13,29 @@ class PlayerClass {
 void PlayerClass::PlayerMovement() {
   Moving = false;
   if (ard.pressed(UP_BUTTON)){
-    if (Walkable(x,y-1)){
-      y-=1;
+    if (Walkable(x,y-2)){
+      y-=2;
       Moving = true;
     }
     d = 0;
     }
   if (ard.pressed(DOWN_BUTTON)){
-    if (Walkable(x,y+1)){
-      y+=1;
+    if (Walkable(x,y+2)){
+      y+=2;
       Moving = true;
     }
     d = 1;
     }
   if (ard.pressed(RIGHT_BUTTON)){
-    if (Walkable(x+1,y)){
-      x+=1;
+    if (Walkable(x+2,y)){
+      x+=2;
       Moving = true;
     }
     d = 2;
     }
   if (ard.pressed(LEFT_BUTTON)){
-    if (Walkable(x-1,y)){
-      x-=1;
+    if (Walkable(x-2,y)){
+      x-=2;
       Moving = true;
     }
     d = 3;
